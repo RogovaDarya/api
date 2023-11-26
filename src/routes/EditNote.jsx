@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 export default function EditNote() {
   const { note } = useLoaderData();
-  console.log(note);
   const [name, setName] = useState(note?.name);
   const [description, setDescription] = useState(note?.description);
   const [error, setError] = useState(null);
@@ -24,8 +23,6 @@ export default function EditNote() {
       description,
       date: note.date,
     };
-
-    console.log(newNote);
 
     await fetch(`https://gttpxm-5001.csb.app/notes/${note?.id}`, {
       method: 'delete',

@@ -24,8 +24,6 @@ export default function CreateNote() {
       date: Date.now(),
     };
 
-    console.log(note);
-
     await fetch(`https://gttpxm-5001.csb.app/notes`, {
       method: 'post',
       headers: {
