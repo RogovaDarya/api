@@ -26,7 +26,7 @@ export default function CreateNote() {
 
     console.log(note);
 
-    await fetch(`http://localhost:5001/notes`, {
+    await fetch(`https://gttpxm-5001.csb.app/notes`, {
       method: 'post',
       headers: {
         Accept: 'application/json, text/plain, */*',

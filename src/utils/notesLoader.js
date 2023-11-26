@@ -1,6 +1,6 @@
 export const notesLoader = async () => {
   const notes = [];
-  await fetch(`http://localhost:5001/notes`)
+  await fetch(`https://gttpxm-5001.csb.app/notes`)
     .then((r) => r.json())
     .then((note) => {
       if (note.length !== 0) {
@@ -15,7 +15,7 @@ export const notesLoader = async () => {
 };
 
 export const noteLoader = async ({ params: { id } }) => {
-  const note = await fetch(`http://localhost:5001/notes/${id}`).then((r) =>
+  const note = await fetch(`https://gttpxm-5001.csb.app/notes/${id}`).then((r) =>
     r.json()
   );
 

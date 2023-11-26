@@ -10,7 +10,7 @@ export default function UserContextProvider({ children }) {
     setLoading(true);
     const id = localStorage.getItem('userId');
     if (id) {
-      fetch(`http://localhost:5001/users?id=${id}`)
+      fetch(`https://gttpxm-5001.csb.app/users?id=${id}`)
         .then((r) => r.json())
         .then((users) => users[0])
         .then((user) => {

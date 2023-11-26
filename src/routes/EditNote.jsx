@@ -27,7 +27,7 @@ export default function EditNote() {
 
     console.log(newNote);
 
-    await fetch(`http://localhost:5001/notes/${note?.id}`, {
+    await fetch(`https://gttpxm-5001.csb.app/notes/${note?.id}`, {
       method: 'delete',
       headers: {
         Accept: 'application/json, text/plain, */*',
@@ -35,7 +35,7 @@ export default function EditNote() {
       },
     });
 
-    await fetch(`http://localhost:5001/notes`, {
+    await fetch(`https://gttpxm-5001.csb.app/notes`, {
       method: 'post',
       headers: {
         Accept: 'application/json, text/plain, */*',

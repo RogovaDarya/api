@@ -27,7 +27,9 @@ export default function SignUp() {
         registrationDate: Date.now(),
       };
 
-      fetch(`http://localhost:5001/users`, {
+      console.log(user);
+
+      fetch(`https://gttpxm-5001.csb.app/users`, {
         method: "post",
         headers: {
           Accept: "application/json, text/plain, */*",

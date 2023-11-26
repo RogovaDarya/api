@@ -1,23 +1,23 @@
-import { useLoaderData, Link, useNavigate } from 'react-router-dom';
-import { MdCreate } from 'react-icons/md';
-import { FaRegTrashAlt } from 'react-icons/fa';
-import { Suspense } from 'react';
+import { useLoaderData, Link, useNavigate } from "react-router-dom";
+import { MdCreate } from "react-icons/md";
+import { FaRegTrashAlt } from "react-icons/fa";
+import { Suspense } from "react";
 
 export default function Notes() {
   const { notes } = useLoaderData();
-  console.log(notes);
+  notes.sort((a, b) => b.date - a.date);
   const navigate = useNavigate();
 
   const handleDeleteNote = async (id) => {
-    await fetch(`http://localhost:5001/notes/${id}`, {
-      method: 'delete',
+    await fetch(`https://gttpxm-5001.csb.app/notes/${id}`, {
+      method: "delete",
       headers: {
-        Accept: 'application/json, text/plain, */*',
-        'Content-Type': 'application/json',
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
       },
     });
 
-    navigate('/notes');
+    navigate("/notes");
   };
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -25,7 +25,7 @@ export default function Notes() {
         <h1>Notes</h1>
         <button
           className="bg-gray-300 py-1 px-4 mt-2 font-semibold font-serif text-xl"
-          onClick={() => navigate('/createnote')}
+          onClick={() => navigate("/createnote")}
         >
           Add new note
         </button>
@@ -43,7 +43,7 @@ export default function Notes() {
                   {new Date(note?.date)
                     .toJSON()
                     .slice(0, 10)
-                    .replaceAll('-', '.')}
+                    .replaceAll("-", ".")}
                 </div>
               </div>
             </Link>

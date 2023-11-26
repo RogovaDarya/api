@@ -11,7 +11,28 @@
       "email": "ooo@mail.ru",
       "password": "1234567Aaaa",
       "registrationDate": 1701000720125
+    },
+    {
+      "id": "1701006516642uhfh95pxum",
+      "email": "ppp@mail.ru",
+      "password": "123Aa123",
+      "registrationDate": 1701006516642
     }
   ],
-  "notes": []
+  "notes": [
+    {
+      "id": "1701006539866e0o3202pivp",
+      "userId": "1701006516642uhfh95pxum",
+      "name": "ahskjdhasd",
+      "description": "kjahskjdhajk",
+      "date": 1701006539866
+    },
+    {
+      "id": "1701006560785tbbfpx9vdzl",
+      "userId": "1701006516642uhfh95pxum",
+      "name": "2",
+      "description": "",
+      "date": 1701006560785
+    }
+  ]
 }

@@ -26,7 +26,7 @@ export default function Login() {
         email,
         password,
       }).toString();
-      fetch(`http://localhost:5001/users?${query}`)
+      fetch(`https://gttpxm-5001.csb.app/users?${query}`)
         .then((r) => r.json())
         .then((users) => users[0])
         .then((user) => {

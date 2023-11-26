@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function NoteView() {
   const { note } = useLoaderData();
   const handleDeleteNote = () => {
-    fetch(`http://localhost:5001/notes/${note?.id}`, {
+    fetch(`https://gttpxm-5001.csb.app/notes/${note?.id}`, {
       method: 'delete',
       headers: {
         Accept: 'application/json, text/plain, */*',
