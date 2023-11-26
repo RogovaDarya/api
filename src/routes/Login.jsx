@@ -38,7 +38,7 @@ export default function Login() {
           }
         });
     } catch (error) {
-      setErrors("Неправильный логин или пароль");
+      setErrors("Invalid user");
     }
   }
 

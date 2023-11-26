@@ -27,8 +27,6 @@ export default function SignUp() {
         registrationDate: Date.now(),
       };
 
-      console.log(user);
-
       fetch(`https://gttpxm-5001.csb.app/users`, {
         method: "post",
         headers: {
